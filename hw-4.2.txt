@@ -1,0 +1,134 @@
+//Explanation: number 3 is converted to a String '3', because first operand is a string and the operator is +
+-> String 'number' + String '3' = 'number3'
+-> String 'number3' + String '3' = 'number33'
+'number' + 3 + 3
+//Result: 'number33'
+
+//Explanation: null is converted to 0, because of + and 3 is not a String => 0 + 3 = 3
+null + 3
+//Result: 3
+
+
+//Explanation: 5 is true, "qwerty" is true, both of them are true, && returns the last operand at that case
+=> 'qwerty'
+5 && "qwerty"
+//Result: 'qwerty'
+
+
+//Explanation: (+'40' becomes a number 40) + (+'2' becomes a number 2) = 42
+-> number 42 is converted to String '42'
+-> '42' +  'hillel'
+=> '42hillel'
++'40' + +'2' + "hillel";
+//Result: '42hillel'
+
+
+//Explanation: '10' becomes a number, because of operator -
+=> 10 - 5 = 5
+=> 5 != 6
+=> false
+'10' - 5 === 6;
+//Result: false
+
+
+//Explanation: true is converted to 1, false is converted to 0, because of operator +
+=> 1 + 0 = 1
+=> 1
+true + false
+//Result: 1
+
+
+//Explanation: '4px' can't be converted to a number and the result here is NaN => NaN
+'4px' - 3
+//Result: NaN
+
+
+//Explanation: String '4' is converted to a number 4, because of operator - => 4 - 3 = 1 => 1
+'4' - 3
+//Result: 1
+
+
+//Explanation: 3**0 = 1 => number 1 is converted to a String '1', because of + operator => '6' + '1' = '61'
+'6' + 3 ** 0;
+//Result: '61'
+
+
+//Explanation: String '6' is converted to a number 6, because of operator / => 12 / 6 = 2
+12 / '6'
+//Result: 2
+
+
+//Explanation: (5 === 6) is false, because 5 != 6
+=> false converts into a String, because '10' is a String and operator is +
+=> '10' + 'false' = '10false'
+'10' + (5 === 6);
+//Result: '10false'
+
+
+//Explanation: == compares the values of two variables after performing type conversion,
+null can't be converted to a String,
+'' can be converted to 0, but not null
+=> false
+null == ''
+//Result: false
+
+
+//Explanation: (9 / 3) = 3 => 3 ** 3 = 27
+3 ** (9 / 3);
+//Result: 27
+
+
+//Explanation: 'false' is true, !'false' is false, !!'false' is true
+=> 'true' is true, !'true' is false, !!'true' is true
+=> true == true
+=> true
+!!'false' == !!'true'
+//Result: true
+
+
+//Explanation: && has higher precedence than ||
+=> 0 is false, '0' is true, 1 is true
+=> '0' && 1 = 1, as both of them are true, && returns the last operand = 1
+=> || returns the first true value it encounters
+=> 0 || 1 (false || true) => 1
+0 || '0' && 1
+//Result: 1
+
+
+//Explanation: +null is converted to a number 0
+-> false is converted to a number 0, because == performing type conversion
+-> (+null == false) = (0 == 0) = true
+-> true is converted to a number 1
+-> 1 < 1
+=> false
+(+null == false) < 1;
+//Result: false
+
+
+//Explanation: && has higher precedence than ||
+-> false && true is false, because && returns the second operand if both operands are true, otherwise, it returns the first false value
+-> false || true = true, as || returns the first true value it encounters
+=> true
+false && true || true
+//Result: true
+
+
+//Explanation: actions in parentheses are performed firstly
+-> (false || true) = true, as || returns the first true value it encounters
+-> false && true is false, because && returns the second operand if both operands are true, otherwise, it returns the first false value
+=> false
+false && (false || true);
+//Result: false
+
+
+//Explanation: actions in parentheses are performed firstly
+-> +null is converted to a number 0
+-> false is converted to a number 0, because == performing type conversion
+-> (+null == false) = (0 == 0) = true
+-> true is converted to a number 1
+-> 1 ** 5 = 1
+-> 1 < 1
+=> false
+(+null == false) < 1 ** 5;
+//Result: false
+
